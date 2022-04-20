@@ -1,0 +1,27 @@
+{
+    "policyRule": {
+        "if": {
+            "allOf": [
+                                {
+                                    "field": "type",
+                                    "equals": "Microsoft.KeyVault/vaults"
+                                },
+                                {
+                                    "field": "type",
+                                    "equals": "Microsoft.Network/virtualNetworkGateways"
+                                },
+                                {
+                                    "field": "type",
+                                    "equals": "Microsoft.Network/expressRouteGateways"
+                                },
+                                {
+                                    "field": "type",
+                                    "equals": "microsoft.network/applicationgateways"
+                                }
+                            ]
+        },
+        "then": {
+            "effect": "deny"
+        }
+    }
+}
